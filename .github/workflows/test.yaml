@@ -18,10 +18,10 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18  # Use your Node.js version
+          node-version: 18  
 
       - name: Install dependencies
         run: npm install
 
-      - name: Run Jest Tests
-        run: npm test
+      - name: Run Jest Tests  
+        run: npm test -- --detectOpenHandles --forceExit
